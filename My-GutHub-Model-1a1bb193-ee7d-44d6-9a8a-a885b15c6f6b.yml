@@ -82,6 +82,11 @@ pages:
             formula: '[BIG_BUYS_POS/Customer Name]'
           - id: inode-1DB0e5bXTJ4jgMcoW3do66/CUST_JSON
             formula: '[BIG_BUYS_POS/Cust Json]'
+        metrics:
+          - id: 7opHImHaaI
+            formula: Sum([Price] * [Quantity])
+            name: Revenue
+            description: Revenue
         order:
           - inode-1DB0e5bXTJ4jgMcoW3do66/ORDER_NUMBER
           - inode-1DB0e5bXTJ4jgMcoW3do66/DATE
