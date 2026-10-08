@@ -112,4 +112,138 @@ pages:
           - inode-1DB0e5bXTJ4jgMcoW3do66/CUST_KEY
           - inode-1DB0e5bXTJ4jgMcoW3do66/CUSTOMER_NAME
           - inode-1DB0e5bXTJ4jgMcoW3do66/CUST_JSON
+      - id: 9E2PSkUuX6
+        kind: table
+        source:
+          connectionId: 6564e85b-9657-4445-9218-2cba8ad7ea12
+          kind: warehouse-table
+          path:
+            - SE_DEMO_DB
+            - BIG_BUYS
+            - D_STORE
+        columns:
+          - id: inode-1Ph0HcP6PI4xDSf5Lqr5Ig/STORE_KEY
+            formula: '[D_STORE/Store Key]'
+          - id: inode-1Ph0HcP6PI4xDSf5Lqr5Ig/STORE_TIER
+            formula: '[D_STORE/Store Tier]'
+          - id: inode-1Ph0HcP6PI4xDSf5Lqr5Ig/STORE_TIER_ORDER
+            formula: '[D_STORE/Store Tier Order]'
+        order:
+          - inode-1Ph0HcP6PI4xDSf5Lqr5Ig/STORE_KEY
+          - inode-1Ph0HcP6PI4xDSf5Lqr5Ig/STORE_TIER
+          - inode-1Ph0HcP6PI4xDSf5Lqr5Ig/STORE_TIER_ORDER
+      - id: HNRGKw_eOg
+        kind: table
+        source:
+          kind: join
+          joins:
+            - left:
+                elementId: 7y3ott_cQh
+                kind: table
+              right:
+                elementId: 9E2PSkUuX6
+                kind: table
+              columns:
+                - left: '[Store Key]'
+                  right: '[Store Key]'
+              joinType: left-outer
+          primarySource:
+            elementId: 7y3ott_cQh
+            kind: table
+        columns:
+          - id: kehC4aKbeG
+            formula: '[BIG_BUYS_POS/Order Number]'
+          - id: bgMc4OHbNb
+            formula: '[BIG_BUYS_POS/Date]'
+          - id: K1xOfXgkaV
+            formula: '[BIG_BUYS_POS/Product Key]'
+          - id: jfG7bpBr0S
+            formula: '[BIG_BUYS_POS/Sku Number]'
+          - id: gqs82Jwk5s
+            formula: '[BIG_BUYS_POS/Quantity]'
+          - id: VgyfSjXrV8
+            formula: '[BIG_BUYS_POS/Cost]'
+          - id: kjQvpbM1hS
+            formula: '[BIG_BUYS_POS/Price]'
+          - id: Ja0JQz_gan
+            formula: '[BIG_BUYS_POS/Product Type]'
+          - id: pdOmQKy_1u
+            formula: '[BIG_BUYS_POS/Product Family]'
+          - id: GpGYePAv0i
+            formula: '[BIG_BUYS_POS/Product Line]'
+          - id: NPB6_x8FBR
+            formula: '[BIG_BUYS_POS/Brand]'
+          - id: kH2RHv03fI
+            formula: '[BIG_BUYS_POS/Product Name]'
+          - id: Tsec_yANF9
+            formula: '[BIG_BUYS_POS/Product Tier]'
+          - id: YkK2jIHrq5
+            formula: '[BIG_BUYS_POS/Merchant Id]'
+          - id: R5lQJ9nLPs
+            formula: '[BIG_BUYS_POS/Store Name]'
+          - id: AldwlQVubu
+            formula: '[BIG_BUYS_POS/Store Key]'
+          - id: TJWP-BzN6D
+            formula: '[BIG_BUYS_POS/Store Tier]'
+          - id: 8GQz19VBEZ
+            formula: '[BIG_BUYS_POS/Store Tier Order]'
+          - id: PssNNXcDDB
+            formula: '[BIG_BUYS_POS/Store Region]'
+          - id: dvXXA_mTdd
+            formula: '[BIG_BUYS_POS/Store State]'
+          - id: t6Cnef5Nw7
+            formula: '[BIG_BUYS_POS/Store City]'
+          - id: x-Yzd8hCNk
+            formula: '[BIG_BUYS_POS/Store Zip Code]'
+          - id: 4YN55yxhJ2
+            formula: '[BIG_BUYS_POS/Store Latitude]'
+          - id: yBsm7sycC_
+            formula: '[BIG_BUYS_POS/Store Longitude]'
+          - id: Inmd-j8y70
+            formula: '[BIG_BUYS_POS/County Name]'
+          - id: MpBwAoycca
+            formula: '[BIG_BUYS_POS/Zip Population]'
+          - id: ASCMsf75Tw
+            formula: '[BIG_BUYS_POS/Cust Key]'
+          - id: Y4SA83Hegh
+            formula: '[BIG_BUYS_POS/Customer Name]'
+          - id: bLuPmwdzSU
+            formula: '[D_STORE/Store Key]'
+          - id: AJJSWDzMGD
+            formula: '[D_STORE/Store Tier]'
+          - id: uAF_iJ1PKx
+            formula: '[D_STORE/Store Tier Order]'
+        name: Combined
+        order:
+          - kehC4aKbeG
+          - bgMc4OHbNb
+          - K1xOfXgkaV
+          - jfG7bpBr0S
+          - gqs82Jwk5s
+          - VgyfSjXrV8
+          - kjQvpbM1hS
+          - Ja0JQz_gan
+          - pdOmQKy_1u
+          - GpGYePAv0i
+          - NPB6_x8FBR
+          - kH2RHv03fI
+          - Tsec_yANF9
+          - YkK2jIHrq5
+          - R5lQJ9nLPs
+          - AldwlQVubu
+          - TJWP-BzN6D
+          - 8GQz19VBEZ
+          - PssNNXcDDB
+          - dvXXA_mTdd
+          - t6Cnef5Nw7
+          - x-Yzd8hCNk
+          - 4YN55yxhJ2
+          - yBsm7sycC_
+          - Inmd-j8y70
+          - MpBwAoycca
+          - ASCMsf75Tw
+          - Y4SA83Hegh
+          - bLuPmwdzSU
+          - AJJSWDzMGD
+          - uAF_iJ1PKx
 kind: data-model
